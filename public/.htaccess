@@ -1,0 +1,23 @@
+# ImgTasks public directory .htaccess file
+# Path: /home/adam/webapps/optimizer/public/.htaccess
+
+# Enable rewrite engine
+RewriteEngine On
+RewriteBase /
+
+# Set index file
+DirectoryIndex index.php
+
+# Allow direct access to static assets
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+
+# Route all requests to index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [QSA,L]
+
+# Set proper content types
+AddType application/javascript .js
+AddType text/css .css
+AddType image/svg+xml .svg

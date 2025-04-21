@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import Nunito font */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  body {
+    @apply bg-gray-100 text-gray-800 font-sans min-h-screen;
+  }
+
+  h1 {
+    @apply text-3xl font-bold mb-6;
+  }
+
+  h2 {
+    @apply text-2xl font-bold mb-4;
+  }
+
+  h3 {
+    @apply text-xl font-semibold mb-3;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply bg-button text-white hover:bg-blue-600 focus:ring-blue-500;
+  }
+
+  .btn-secondary {
+    @apply bg-accent text-gray-800 hover:bg-gray-300 focus:ring-gray-400;
+  }
+
+  .btn-success {
+    @apply bg-accent2 text-gray-800 hover:bg-green-300 focus:ring-green-400;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-card p-6 mb-6;
+  }
+
+  .form-input {
+    @apply w-full px-4 py-2 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50 shadow-input;
+  }
+
+  .form-label {
+    @apply block text-sm font-medium text-gray-700 mb-1;
+  }
+
+  /* Custom Dropzone styling */
+  .dropzone {
+    @apply border-2 border-dashed border-gray-300 rounded-xl p-6 text-center cursor-pointer transition-all duration-200 hover:border-button;
+  }
+
+  .dropzone-active {
+    @apply border-button bg-blue-50;
+  }
+
+  /* Pipeline steps */
+  .pipeline-step {
+    @apply bg-white border border-gray-200 rounded-lg p-4 mb-2 cursor-move shadow-sm hover:shadow-md transition-shadow duration-200;
+  }
+}
+
+/* Custom Sweet Alert styling to match Tailwind theme */
+.swal2-popup {
+  @apply font-sans;
+}
+
+/* Custom progress bar styling for ProgressBar.js */
+.progress-bar-container svg path:first-child {
+  @apply stroke-gray-200;
+}
+
+.progress-bar-container svg path:last-child {
+  @apply stroke-button;
+}

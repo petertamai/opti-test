@@ -1,0 +1,32 @@
+# ImgTasks Environment Configuration
+# Path: /.env
+# IMPORTANT: Keep this file secure and add to .gitignore!
+
+# Application settings
+APP_NAME=ImgTasks
+APP_ENV=production
+APP_DEBUG=false
+APP_URL=https://optimizer.petertam.pro
+APP_BASE_PATH=
+APP_TIMEZONE=UTC
+
+# API Integrations
+REPLICATE_API_TOKEN=r8_VlVHAJv1u2gCZ82jATXrHwMwHpkoTfO2SsiKr
+IMAGE_OPTIMIZATION_SERVICE_BASE_URL=https://imgopt.petertam.pro
+IMAGE_OPTIMIZATION_API_KEY=key
+
+# File Management
+MAX_UPLOAD_SIZE_MB=25
+TEMP_FILES_TTL_HOURS=24
+TEMP_UPLOADS_DIR=uploads
+
+# Session Configuration
+SESSION_LIFETIME_MINUTES=120
+SESSION_COOKIE_PATH=/
+SESSION_COOKIE_SECURE=false  # Set to true if using HTTPS
+SESSION_COOKIE_HTTPONLY=true
+SESSION_COOKIE_SAMESITE=Lax
+
+# Error Logging
+ERROR_LOG_PATH=logs/error.log
+ERROR_REPORTING_LEVEL=E_ALL

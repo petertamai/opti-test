@@ -1,0 +1,40 @@
+{
+    "name": "imgtasks",
+    "version": "1.0.0",
+    "description": "ImgTasks - Image processing web application",
+    "main": "index.js",
+    "scripts": {
+      "dev": "npx tailwindcss -i ./src/css/input.css -o ./public/css/style.css --watch",
+      "build": "npx tailwindcss -i ./src/css/input.css -o ./public/css/style.css --minify",
+      "clean": "rm -rf node_modules"
+    },
+    "keywords": [
+      "image",
+      "processing",
+      "optimization",
+      "background-removal"
+    ],
+    "author": "Piotr Tamulewicz <pt@petertam.pro>",
+    "license": "UNLICENSED",
+    "private": true,
+    "devDependencies": {
+      "autoprefixer": "^10.4.16",
+      "postcss": "^8.4.31",
+      "tailwindcss": "^3.3.5"
+    },
+    "dependencies": {
+      "dropzone": "^6.0.0-beta.2",
+      "jquery": "^3.7.1",
+      "progressbar.js": "^1.1.1",
+      "sortablejs": "^1.15.0",
+      "sweetalert2": "^11.9.0"
+    },
+    "browserslist": [
+      "> 1%",
+      "last 2 versions",
+      "not dead"
+    ],
+    "engines": {
+      "node": ">=16.0.0"
+    }
+  }
